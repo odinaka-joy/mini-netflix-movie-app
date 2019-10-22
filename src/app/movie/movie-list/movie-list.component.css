@@ -1,0 +1,94 @@
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.title {
+  width: 100%;
+  background-color: rgba(58, 56, 56, 0.685);
+  color: #ddd;
+  padding: 10px;
+}
+.search {
+  width: 100%;
+}
+.search input {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #ddd;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.search input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid#ddd;
+  border-left: 2px solid#ddd;
+  background-color: rgb(36, 35, 35);
+}
+.sort i {
+  cursor: pointer;
+  margin: 0 10px;
+}
+.wrapper {
+  width: 100%;
+  grid-gap: 20px;
+}
+.grid-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid rgb(117, 3, 3);
+  position: relative;
+}
+.favourite {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.favourite i {
+  color: rgb(255, 251, 251);
+  font-size: 18px;
+  background-color: rgb(117, 3, 3);
+  padding: 5px;
+}
+.overlay {
+  margin: 0 auto;
+  position: absolute;
+  bottom: 3px;
+  width: 93%;
+  padding: 20px 0;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.924);
+  color: #ddd;
+  opacity: 1;
+  text-align: center;
+}
+.custom-pagination {
+  text-align: center;
+  width: 100%;
+  margin: 20px auto 5px auto;
+  background-color: rgba(58, 56, 56, 0.685);
+  padding: 10px;
+}
+.custom-pagination .page-number {
+  display: inline-block;
+  margin: 0px 4px;
+  border-radius: 25px;
+}
+.page-number.current {
+  color: red;
+}
+.page-number span {
+  display: block;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.pagination-previous,.pagination-next{
+  display: inline-block;
+  font-weight: bold;
+}

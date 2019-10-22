@@ -1,0 +1,30 @@
+<form #projectForm="ngForm" (ngSubmit)="signup(projectForm)">
+    <div *ngIf='errorMessage' class='alert alert-danger'>
+      Error: {{ errorMessage }}
+    </div>
+    <div class="form-group">
+      <label for="name">Full name</label>
+      <input type="text" class="form-control" name="name" required placeholder="Enter your name" #nameField = "ngModel" 
+      [(ngModel)]="userData.name" [class.invalid-field] = "projectForm.submitted && nameField.invalid">
+      <div [hidden]="!projectForm.submitted || nameField.valid" class="alert alert-danger">
+        Enter A Name Please
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" required  name="email" placeholder="Enter email" #emailField = "ngModel"
+      [(ngModel)]="userData.email" [class.invalid-field] = "projectForm.submitted && emailField.invalid">
+      <div [hidden]="!projectForm.submitted || emailField.valid" class="alert alert-danger">
+        Enter your Email Please
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" required name="password" placeholder="Password" #passwordField = "ngModel"
+      [(ngModel)]="userData.password"  [class.invalid-field] = "projectForm.submitted && passwordField.invalid">
+      <div [hidden]="!projectForm.submitted || passwordField.valid" class="alert alert-danger">
+        You Do Need A Password
+      </div>
+    </div>
+    <button type="submit" class="btn btn-danger lg">Signup</button>
+</form>

@@ -1,0 +1,62 @@
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.title {
+  width: 100%;
+  background-color: rgba(58, 56, 56, 0.685);
+  color: #ddd;
+  padding: 10px;
+}
+.wrapper {
+  width: 100%;
+}
+.left {
+  width: 100%;
+}
+.right {
+  text-align: center;
+  width: 100%;
+}
+.right img {
+  text-align: center;
+  width: 100%;
+}
+.crop {
+  overflow: hidden;
+}
+.crop span.fa {
+  color: #f8ce0b;
+  font-size: 20px;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .details {
+    width: 80%;
+  }
+  .related {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+.related {
+  width: 100%;
+  text-align: center;
+}
+.related img {
+  width: 100%;
+}
+.red {
+  font-weight: bolder;
+  color: rgb(117, 3, 3);
+}
+.btn {
+  background-color: rgb(117, 3, 3);
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  color: #ddd;
+  cursor: pointer;
+}

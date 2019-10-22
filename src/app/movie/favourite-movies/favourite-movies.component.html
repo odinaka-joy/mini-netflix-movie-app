@@ -1,0 +1,49 @@
+<div class="heading">
+  <h2 class="title">All My Favourite Movies...</h2>
+</div>
+
+<section *ngIf="localMovies && localMovies.length">
+  <div class="alert alert-warning alert-dismissible fade show" *ngIf="deleteMessage" role="alert">
+    <strong>{{ deleteMessage }}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="row wrapper mb-5 mt-5" *ngFor="let movie of localMovies | paginate: config">
+    <div class='col-md-4'>
+      <img src="{{ movie.image.url }}" alt="{{ movie.image.name }}" title="{{ movie.title }}" class="grid-img">
+    </div>
+    <div class='col-md-8 left'>
+      <div class="crop" title="rating">
+        <div>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        </div>
+      </div>
+      <h3><span class="red">Title:</span> {{ movie.title | uppercase }}</h3>
+      <p><span class="red">RELEASED IN:</span> {{ movie.releaseYear }}</p>
+      <p><span class="red">PRODUCED IN:</span> {{ movie.createdAt }} | Full Episode</p>
+      <p><span class="red">AUDIO:</span> English</p>
+      <p><span class="red">SUBTITLE:</span> English</p>
+      <p><span class="red">GENRE:</span>
+        <span class="badge badge-pill badge-secondary" *ngFor="let gen of movie.genre"> {{ gen }} </span>
+      </p>
+      <div class="details">
+        In This Episode: {{ movie.description }}
+      </div><br>
+      <button class='btn btn-danger' id="{{ movie.objectId }}" (click)='removeFavourite($event)'>
+        Remove
+      </button>
+    </div>
+    <hr>
+  </div>
+</section>
+
+<div *ngIf = "!localMovies.length" class='alert alert-danger'>
+    Sorry: You Have No Favourite Movie. <br>
+    But Does It Infer That Our Movies Don't Interest You Enough???
+    <p><a [routerLink]="['/movies']" style="color:#000">Ok, Let Me Add Favourite Movies</a></p>
+</div>

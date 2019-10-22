@@ -1,0 +1,23 @@
+<form #projectForm="ngForm" (ngSubmit)="signin(projectForm)">
+    <div *ngIf='errorMessage' class='alert alert-danger'>
+      Error: {{ errorMessage }}
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" required  name="email" placeholder="Enter email" #emailField = "ngModel"
+      [(ngModel)]="user_data.email" [class.invalid-field] = "projectForm.submitted && emailField.invalid">
+      <div [hidden]="!projectForm.submitted || emailField.valid" class="alert alert-danger">
+        Enter your Email Please
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" required name="password" placeholder="Password" #passwordField = "ngModel"
+      [(ngModel)]="user_data.password"  [class.invalid-field] = "projectForm.submitted && passwordField.invalid">
+      <div [hidden]="!projectForm.submitted || passwordField.valid" class="alert alert-danger">
+        You Do Need A Password
+      </div>
+    </div>
+    <button type="submit" class="btn btn-danger lg">Signin</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Don't Have An Account? <a [routerLink]="['/signup']" type="submit" class="btn btn-secondary lg">Sign Up</a>
+</form>
