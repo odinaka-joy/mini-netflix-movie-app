@@ -27,21 +27,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-
-Back End was developed with Node/Express and hosted on Heroku. ---> https://github.com/odinaka-joy/mini-netflix-api
-
-Authenticated with JWT and bcrypt
-
-Database is on MongoDB
-
-
 # mini-netflix
 Mini-Netflix Movie App
 A Movie App Built On Angular, Where Users Can View Recent Movies and Add or Remove favourite Movies. 
 
 Front End was developed on Angular
 
-Back End was developed with Node/Express and hosted on Heroku. --->   https://github.com/odinaka-joy/mini-netflix-api
+Back End was developed with Node/Express and hosted on Heroku. --->   https://github.com/dinakajoy/mini-netflix-api
 
 Authenticated with JWT and bcrypt 
 
