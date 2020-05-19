@@ -39,4 +39,4 @@ Authenticated with JWT and bcrypt
 
 Database is on MongoDB 
 
-Website url is https://mini-netflix-by-joy.netlify.com/movies
+Website url is https://mini-netflix-by-joy.netlify.com
