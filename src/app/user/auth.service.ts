@@ -10,13 +10,13 @@ import { IUser } from './user';
 })
 export class AuthService {
   isLoggedIn = false;
-  url = 'https://safe-crag-24653.herokuapp.com/user';
-  signinUrl = 'https://safe-crag-24653.herokuapp.com/user/signin';
+  signupUrl = 'https://mini-netflix-by-joy.herokuapp.com/user/signup';
+  signinUrl = 'https://mini-netflix-by-joy.herokuapp.com/user/signin';
 
   constructor(private http: HttpClient, private router: Router) { }
 
   addUser(userData:IUser): Observable<any>  {
-    return this.http.post(this.url, userData);
+    return this.http.post(this.signupUrl, userData);
   }
 
   getUser(user_data): Observable<any>  {
