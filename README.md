@@ -1,9 +1,9 @@
 # mini-netflix
-Mini-Netflix Movie App
+Mini-Netflix Movie App 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
 
-A Movie App Built On Angular, Where Users Can View Recent Movies and Add or Remove favourite Movies. 
+A Movie App Built On Angular, Where Users Can View Recent Movies and Add or Remove Favourite Movies. 
 
 Front End was developed on Angular
 
@@ -26,3 +26,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Author
+[Odinaka Joy](http://dinakajoy.com)
